@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:docs.google.com)"
+      "WebFetch(domain:docs.google.com)",
+      "Bash(for:*)",
+      "Bash(do echo \"Updating $f\")",
+      "Bash(done:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

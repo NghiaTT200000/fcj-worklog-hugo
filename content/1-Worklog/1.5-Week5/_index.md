@@ -17,9 +17,9 @@ pre: " <b> 1.5. </b> "
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
 | 1 | - Study Module 04-01: Storage Overview <br> - S3, Storage Gateway, Snow Family <br> - Disaster Recovery concepts | 10/06/2025 | 10/06/2025 | AWS Cloud Journey |
-| 2 | - Study Module 04-02: S3 Deep Dive <br> - S3 Buckets, Access Points <br> - Storage Classes | 10/07/2025 | 10/07/2025 | AWS Cloud Journey |
-| 3 | - Study Module 04-03: S3 Advanced <br> - S3 Static Websites <br> - CORS, Versioning, Glacier | 10/08/2025 | 10/08/2025 | AWS Cloud Journey |
-| 4 | - Study Module 04-04: Hybrid Storage <br> - Storage Gateway <br> - Snow Family, AWS Backup | 10/09/2025 | 10/09/2025 | AWS Cloud Journey |
+| 2 | - Study Module 04-02: S3 Deep Dive <br> - S3 Buckets, Access Points <br> - Storage Classes <br> - Blog Translation | 10/07/2025 | 10/07/2025 | AWS Cloud Journey |
+| 3 | - Study Module 04-03: S3 Advanced <br> - S3 Static Websites <br> - CORS, Versioning, Glacier <br> - Blog Translation | 10/08/2025 | 10/08/2025 | AWS Cloud Journey |
+| 4 | - Study Module 04-04: Hybrid Storage <br> - Storage Gateway <br> - Snow Family, AWS Backup <br> - Blog Translation | 10/09/2025 | 10/09/2025 | AWS Cloud Journey |
 | 5 | **BLOG TRANSLATION DAY** <br> - Translate assigned blog content <br> - Review and edit translation | 10/10/2025 | 10/10/2025 | Blog Translation |
 | 6-7 | - Lab Practice: Module 04-Lab13 <br> - S3 static website setup <br> - Configure CloudFront | 10/11-12/2025 | 10/12/2025 | AWS Cloud Journey |
 

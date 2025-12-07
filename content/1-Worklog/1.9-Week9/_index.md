@@ -9,44 +9,46 @@ pre: " <b> 1.9. </b> "
 
 ### Week 9 Objectives:
 
-* Final Project Implementation
-* Complete project features
-* Testing and debugging
+* Research AWS Advanced Services for Final Project
+* Deep dive into security, CI/CD, and infrastructure services
+* Evaluate tools for project implementation
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1-2 | **FINAL PROJECT DEVELOPMENT** <br> - Implement core features <br> - Set up monitoring | 11/03-04/2025 | 11/04/2025 | Project Resources |
-| 3-4 | **TESTING & DEBUGGING** <br> - Unit testing <br> - Integration testing | 11/05-06/2025 | 11/06/2025 | Project Resources |
-| 5 | **PERFORMANCE OPTIMIZATION** <br> - Optimize resource usage <br> - Implement caching | 11/07/2025 | 11/07/2025 | Project Resources |
-| 6 | **DOCUMENTATION** <br> - Write technical documentation <br> - Create user guide | 11/08/2025 | 11/08/2025 | Project Resources |
-| 7 | **REVIEW & PREPARATION** <br> - Code review <br> - Prepare for presentation | 11/09/2025 | 11/09/2025 | Project Resources |
+| 1 | **Amazon Cognito Deep Dive** <br> - User pools vs Identity pools <br> - Authentication flows <br> - Social integration | 11/03/2025 | 11/03/2025 | AWS Docs |
+| 2 | **AWS WAF & Security** <br> - WAF rules and ACLs <br> - Security best practices <br> - DDoS protection | 11/04/2025 | 11/04/2025 | AWS Docs |
+| 3 | **Developer Tools Research** <br> - CodeCommit, CodeBuild, CodePipeline <br> - CodeStar overview <br> - CI/CD workflows | 11/05/2025 | 11/05/2025 | AWS Docs |
+| 4 | **Infrastructure as Code** <br> - Terraform fundamentals <br> - CloudFormation vs Terraform <br> - IaC best practices | 11/06/2025 | 11/06/2025 | Terraform Docs |
+| 5 | **AWS Amplify & Lambda** <br> - Amplify framework <br> - Lambda deep dive <br> - Serverless patterns | 11/07/2025 | 11/07/2025 | AWS Docs |
+| 6-7 | **Global Services** <br> - Route 53 configuration <br> - CloudFront strategies <br> - S3 advanced patterns | 11/08-09/2025 | 11/09/2025 | AWS Docs |
 
 ### Week 9 Achievements:
 
-* Successfully implemented all core project features
-* Completed comprehensive testing of the application
-* Optimized performance and resource utilization
-* Created detailed technical documentation
-* Prepared project presentation materials
-* Resolved all critical bugs and issues
-* Implemented monitoring and logging
+* Comprehensive understanding of AWS Cognito authentication patterns
+* Knowledge of WAF configuration for web application security
+* Understanding of AWS CI/CD pipeline components
+* Basic proficiency in Terraform for infrastructure management
+* Awareness of Amplify capabilities for full-stack development
+* Knowledge of Route 53 for DNS management
+* Understanding of CloudFront optimization strategies
+* Advanced S3 patterns for different use cases
 
 ### Challenges Faced:
 
-* Integration between different AWS services
-* Performance bottlenecks
-* Debugging complex workflows
+* Complexity of Cognito configuration
+* Terraform learning curve
+* CI/CD pipeline design decisions
 
 ### Solutions Implemented:
 
-* Created service integration diagrams
-* Implemented caching strategies
-- Built comprehensive logging system
-* Optimized database queries
+* Created Cognito configuration templates
+* Built Terraform module examples
+* Designed sample CI/CD workflows
+- Documented WAF rule patterns
 
 ### Next Week's Plan:
 
-* Final project presentation
-* Project demo and Q&A
-* Internship reflection and summary
+* Design final project architecture
+* Create detailed implementation plan
+- Set up development environment

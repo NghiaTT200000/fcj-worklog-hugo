@@ -1,39 +1,38 @@
 ---
 title: "Worklog"
-date: "2025-09-10"
+date: "2025-09-08"
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# AWS Training & Project Worklog
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
+This worklog documents my 12-week journey through the AWS training program and final project development. Starting from September 8th, 2025, I completed comprehensive AWS training covering 7 modules, followed by intensive research and development of a full-stack serverless application.
 
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
 
-**Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
+## Weekly Breakdown
 
-**Week 2:** [Doing task A...](1.2-week2/)
+**Week 1 (Sep 8-14):** [AWS Fundamentals & Account Setup](1.1-week1/)
 
-**Week 3:** [Doing task B...](1.3-week3/)
+**Week 2 (Sep 15-21):** [VPC & Networking](1.2-week2/)
 
-**Week 4:** [Doing task C...](1.4-week4/)
+**Week 3 (Sep 22-28):** [Amazon EC2 - Core Compute](1.3-week3/)
 
-**Week 5:** [Doing task D...](1.5-week5/)
+**Week 4 (Sep 29 - Oct 5):** [EC2 Advanced & Auto Scaling](1.4-week4/)
 
-**Week 6:** [Doing task E...](1.6-week6/)
+**Week 5 (Oct 6-12):** [AWS Storage Services & Blog Translation](1.5-week5/)
 
-**Week 7:** [Doing task G...](1.7-week7/)
+**Week 6 (Oct 13-19):** [Security, IAM & Review](1.6-week6/)
 
-**Week 8:** [Doing task H...](1.8-week8/)
+**Week 7 (Oct 20-26):** [Database Services](1.7-week7/)
 
-**Week 9:** [Doing task I...](1.9-week9/)
+**Week 8 (Oct 27 - Nov 2):** [Data Analytics & Project Kickoff](1.8-week8/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 9 (Nov 3-9):** [AWS Services Research](1.9-week9/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 10 (Nov 10-16):** [Architecture Design](1.10-week10/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 11 (Nov 17-23):** [Backend Implementation](1.11-week11/)
+
+**Week 12 (Nov 24-30):** [Frontend & Production Deployment](1.12-week12/)
