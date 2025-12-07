@@ -1,58 +1,60 @@
 ---
-title: "Worklog Tuần 12"
-date: "2025-09-10"
-weight: 2
+title: "Nhật ký Tuần 12"
+date: "2025-11-24"
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+### Mục tiêu Tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Phát triển Frontend với Amplify
+* Testing và Quality Assurance
+* Tối ưu hóa Performance và Deployment
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Amplify Setup** <br> - Khởi tạo dự án Amplify <br> - Cấu hình auth với Cognito <br> - Thiết lập GraphQL API | 24/11/2025 | 24/11/2025 | Amplify Docs |
+| 2 | **Frontend Development** <br> - Xây dựng React/Vue components <br> - Tích hợp với API Gateway <br> - Triển khai authentication flow | 25/11/2025 | 25/11/2025 | React/Vue |
+| 3 | **CloudFront & Route 53** <br> - Cấu hình CloudFront distribution <br> - Thiết lập custom domain <br> - Cấu hình Route 53 | 26/11/2025 | 26/11/2025 | AWS Console |
+| 4 | **WAF Implementation** <br> - Thiết lập WAF rules <br> - Cấu hình SQL injection protection <br> - Thiết lập rate limiting | 27/11/2025 | 27/11/2025 | AWS WAF |
+| 5 | **Testing & QA** <br> - Unit testing <br> - Integration testing <br> - Load testing | 28/11/2025 | 28/11/2025 | Testing Tools |
+| 6-7 | **Final Deployment** <br> - Production deployment <br> - Thiết lập monitoring <br> - Hoàn thành tài liệu | 29-30/11/2025 | 30/11/2025 | AWS |
 
+### Thành tựu Tuần 12:
 
-### Kết quả đạt được tuần 12:
+* Triển khai thành công ứng dụng full-stack với Amplify
+* Tích hợp authentication với Cognito
+* Cấu hình global CDN với CloudFront
+* Thiết lập custom domain với Route 53
+* Triển khai WAF cho bảo mật
+* Hoàn thành testing toàn diện
+* Tối ưu hóa performance ứng dụng
+* Triển khai đến production environment
+* Tạo tài liệu dự án hoàn chỉnh
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Khó khăn đối mặt:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Độ phức tạp của cấu hình Amplify
+* Tích hợp frontend-backend
+- Delays truyền DNS
+* Tối ưu hóa performance
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Giải pháp đã thực hiện:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Sử dụng Amplify CLI cho thiết lập streamlined
+* Tạo layer tích hợp API
+* Lập kế thay đổi DNS trước
+- Triển khai caching strategies
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Tóm tắt Dự án:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Xây dựng ứng dụng serverless hoàn chỉnh
+* Sử dụng các dịch vụ AWS hiện đại (Lambda, DynamoDB, Cognito)
+* Triển khai CI/CD với AWS CodePipeline
+* Đạt được khả năng mở rộng toàn cầu với CloudFront
+* Bảo mật ứng dụng với WAF
+* Tài liệu hóa toàn bộ kiến trúc và quy trình deployment
 
 

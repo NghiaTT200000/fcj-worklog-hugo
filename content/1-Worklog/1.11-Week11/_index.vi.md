@@ -1,59 +1,57 @@
 ---
-title: "Worklog Tuần 11"
-date: "2025-09-10"
-weight: 2
+title: "Nhật ký Tuần 11"
+date: "2025-11-17"
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 11:
 
-### Mục tiêu tuần 11:
+* Phát triển Backend Services
+* Triển khai Lambda Function
+* Thiết lập CI/CD Pipeline
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Infrastructure Deployment** <br> - Áp dụng Terraform scripts <br> - Thiết lập VPC và security groups <br> - Cấu hình S3 buckets | 17/11/2025 | 17/11/2025 | Terraform |
+| 2 | **Database Setup** <br> - Triển khai RDS instances <br> - Cấu hình DynamoDB tables <br> - Thiết lập ElastiCache | 18/11/2025 | 18/11/2025 | AWS Console |
+| 3 | **Lambda Development** <br> - Tạo Lambda functions <br> - Triển khai API endpoints <br> - Thiết lập API Gateway | 19/11/2025 | 19/11/2025 | VS Code |
+| 4 | **Cognito Integration** <br> - Thiết lập User Pool <br> - Cấu hình authentication <br> - Triển khai auth trong Lambda | 20/11/2025 | 20/11/2025 | AWS Console |
+| 5 | **CodeCommit Setup** <br> - Khởi tạo repositories <br> - Push code ban đầu <br> - Thiết lập branch strategy | 21/11/2025 | 21/11/2025 | Git |
+| 6-7 | **CI/CD Pipeline** <br> - Cấu hình CodeBuild <br> - Thiết lập CodePipeline <br> - Test automated deployments | 22-23/11/2025 | 23/11/2025 | AWS Code* |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 11:
 
+* Triển khai thành công infrastructure sử dụng Terraform
+* Cấu hình hoàn toàn database layer với RDS và DynamoDB
+* Triển khai backend services với Lambda
+* Tích hợp hệ thống authentication Cognito
+* Thiết lập version control với CodeCommit
+* Xây dựng CI/CD pipeline với automated deployments
+* Tạo Lambda functions modular cho các dịch vụ khác nhau
+* Triển khai error handling và logging phù hợp
 
-### Kết quả đạt được tuần 11:
+### Khó khăn đối mặt:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Quản lý state Terraform
+* Tối ưu hóa cold start Lambda
+* Debug CI/CD pipeline
+* Độ phức tạp của cấu hình Cognito
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Giải pháp đã thực hiện:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Sử dụng remote state storage cho Terraform
+* Triển khai Lambda best practices cho performance
+* Tạo pipeline testing strategies
+* Xây dựng templates cấu hình Cognito
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch Tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Phát triển frontend với Amplify
+* Testing và bảo đảm chất lượng
+* Tối ưu hóa performance
+* Tài liệu hóa và deployment
 
 

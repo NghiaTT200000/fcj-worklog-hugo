@@ -1,59 +1,54 @@
 ---
-title: "Worklog Tuần 8"
-date: "2025-09-10"
-weight: 1
+title: "Nhật ký Tuần 8"
+date: "2025-10-27"
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 8:
 
-### Mục tiêu tuần 8:
+* Hoàn thành Module 07: Data Analytics & Lake House
+* Hiểu các khái niệm data lake và services
+* Bắt đầu triển khai dự án cuối kỳ
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học Data Lake Concepts <br> - Glue, Athena, QuickSight overview <br> - Data pipeline architecture | 27/10/2025 | 27/10/2025 | AWS Cloud Journey |
+| 2 | - Học Module 07-01: DynamoDB <br> - NoSQL concepts <br> - DynamoDB features | 28/10/2025 | 28/10/2025 | AWS Cloud Journey |
+| 3 | - Thực hành Lab: Module 07-Lab35 <br> - Create S3 Data Lake <br> - Set up Glue Crawler | 29/10/2025 | 29/10/2025 | AWS Cloud Journey |
+| 4 | - Thực hành Lab tiếp theo <br> - Athena queries <br> - QuickSight visualization | 30/10/2025 | 30/10/2025 | AWS Cloud Journey |
+| 5 | **TRIỂN KHAI DỰ ÁN CUỐI KỲ** <br> - Thiết lập cơ sở hạ tầng dự án <br> - Cấu hình các dịch vụ cốt lõi | 31/10/2025 | 31/10/2025 | Nguồn dự án |
+| 6-7 | **LÀM VIỆC DỰ ÁN** <br> - Triển khai các tính năng chính <br> - Test functionality | 01-02/11/2025 | 02/11/2025 | Nguồn dự án |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 8:
 
+* Hiểu về kiến trúc Data Lake
+* Kiến thức về AWS Analytics services
+* Kinh nghiệm thực hành với Glue, Athena, QuickSight
+* Hiểu về DynamoDB NoSQL database
+* Tạo thành công Data Lake pipeline
+* Triển khai data catalog với Glue
+* Tạo visualizations với QuickSight
+* Bắt đầu triển khai dự án cuối kỳ
 
-### Kết quả đạt được tuần 8:
+### Khó khăn đối mặt:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu Data Lake vs Data Warehouse
+* Cấu hình IAM phù hợp cho analytics services
+* Debug data transformations
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Giải pháp đã thực hiện:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tạo sơ đồ kiến trúc Data Lake
+* Xây dựng IAM policy templates cho analytics
+* Hướng dẫn data pipeline từng bước
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch Tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hoàn thành triển khai dự án cuối kỳ
+* Tài liệu hóa kiến trúc dự án
+* Chuẩn bị cho thuyết trình
 
 

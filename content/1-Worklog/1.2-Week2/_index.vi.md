@@ -1,59 +1,54 @@
 ---
-title: "Worklog Tuần 2"
-date: "2025-09-10"
-weight: 1
+title: "Nhật ký Tuần 2"
+date: "2025-09-15"
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 2:
 
-### Mục tiêu tuần 2:
+* Hoàn thành Module 02: AWS VPC và Bảo mật
+* Hiểu các khái niệm Virtual Private Cloud và các thành phần
+* Tìm hiểu về bảo mật mạng và các tùy chọn kết nối
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học Module 02-01: Giới thiệu AWS VPC <br> - Khái niệm VPC, Public/Private subnets <br> - CIDR blocks và IP addressing | 15/09/2025 | 15/09/2025 | AWS Cloud Journey |
+| 2 | - Học Module 02-02: Các thành phần VPC <br> - Route Tables, ENI, EIP <br> - Internet Gateway, NAT Gateway | 16/09/2025 | 16/09/2025 | AWS Cloud Journey |
+| 3 | - Học Module 02-03: Bảo mật VPC <br> - Security Groups vs NACLs <br> - Best practices | 17/09/2025 | 17/09/2025 | AWS Cloud Journey |
+| 4 | - Học Kết nối Mạng <br> - VPN Site-to-Site <br> - Direct Connect, Load Balancers | 18/09/2025 | 18/09/2025 | AWS Cloud Journey |
+| 5 | - Thực hành Lab: Module 02-Lab03 <br> - Tạo VPC và subnets <br> - Cấu hình Internet Gateway | 19/09/2025 | 19/09/2025 | AWS Cloud Journey |
+| 6-7 | - Tiếp tục Thực hành Lab <br> - Thiết lập routing <br> - Test kết nối mạng | 20-21/09/2025 | 21/09/2025 | AWS Cloud Journey |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 2:
 
+* Nắm vững các khái niệm VPC bao gồm public vs private subnets
+* Hiểu về các thành phần VPC: Route Tables, ENI, EIP, VPC Endpoints
+* Hiểu về các tùy chọn kết nối mạng: IGW, NAT Gateway, VPN
+* Phân biệt được Security Groups (stateful) và NACLs (stateless)
+* Tạo thành công VPC tùy chỉnh với cấu hình subnet phù hợp
+* Cấu hình Internet Gateway cho truy cập public subnet
+* Thiết lập route tables để điều hướng traffic phù hợp
+* Test kết nối mạng giữa các thành phần
 
-### Kết quả đạt được tuần 2:
+### Khó khăn đối mặt:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nhầm lẫn giữa routing của public và private subnet
+* Hiểu khi nào sử dụng Security Groups vs NACLs
+* Cấu hình route tables phù hợp
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Giải pháp đã thực hiện:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tạo sơ đồ routing để trực quan hóa traffic flow
+* Xây dựng bảng so sánh Security Groups vs NACLs
+* Hướng dẫn cấu hình route table từng bước
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch Tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Bắt đầu Module 03: Amazon EC2
+* Học về các loại instance và tính năng của EC2
+* Tìm hiểu về AMI, EBS, và các tùy chọn lưu trữ
 
 

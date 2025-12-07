@@ -1,59 +1,55 @@
 ---
-title: "Worklog Tuần 10"
-date: "2025-09-10"
-weight: 2
+title: "Nhật ký Tuần 10"
+date: "2025-11-10"
+weight: 10
 chapter: false
-pre: " <b> 1.10. </b> "
+pre: " <b> 1.10. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 10:
 
-### Mục tiêu tuần 10:
+* Thiết kế Kiến trúc Dự án Cuối kỳ
+* Lập kế hoạch triển khai infrastructure
+* Tạo thông số kỹ thuật chi tiết
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Architecture Planning** <br> - Thiết kế hệ thống kiến trúc <br> - Định nghĩa cấu trúc microservices <br> - Tạo sơ đồ luồng dữ liệu | 10/11/2025 | 10/11/2025 | Architecture Docs |
+| 2 | **Infrastructure Design** <br> - Lập kế VPC architecture <br> - Thiết kế lớp security <br> - Lập kế CI/CD pipeline | 11/11/2025 | 11/11/2025 | AWS Well-Architected |
+| 3 | **Database Architecture** <br> - Thiết kế data models <br> - Lập kế RDS/DynamoDB usage <br> - Thiết kế caching strategy | 12/11/2025 | 12/11/2025 | Database Patterns |
+| 4 | **Security Architecture** <br> - Thiết kế authentication flow với Cognito <br> - Lập kế WAF rules <br> - Thiết kế IAM structure | 13/11/2025 | 13/11/2025 | Security Best Practices |
+| 5 | **CDN & Global Design** <br> - Lập kế CloudFront distribution <br> - Thiết kế Route 53 strategy <br> - Lập kế S3 bucket structure | 14/11/2025 | 14/11/2025 | AWS Patterns |
+| 6-7 | **Create Terraform Scripts** <br> - Viết infrastructure code <br> - Tạo modular design <br> - Lập kế deployment stages | 15-16/11/2025 | 16/11/2025 | Terraform |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 10:
 
+* Tài liệu hóa kiến trúc hệ thống hoàn chỉnh
+- Thiết kế infrastructure chi tiết với các cân nhắc security
+* Kế hoạch kiến trúc data toàn diện
+* Scripts Terraform để triển khai infrastructure
+* Thiết kế CI/CD pipeline sử dụng AWS CodePipeline
+* Kiến trúc security với WAF và Cognito integration
+* Chiến lược triển khai toàn cầu với CloudFront và Route 53
+* Infrastructure code modular để tái sử dụng
 
-### Kết quả đạt được tuần 10:
+### Khó khăn đối mặt:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Cân bằng độ phức tạp vs khả năng mở rộng
+* Trade-offs giữa security và accessibility
+* Tối ưu hóa chi phí trong thiết kế
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Giải pháp đã thực hiện:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tạo architecture decision records (ADRs)
+* Xây dựng mô hình ước tính chi phí
+* Thiết kế phương pháp triển khai theo giai đoạn
+* Tạo chiến lược testing infrastructure
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch Tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Bắt đầu coding backend services
+* Triển khai core infrastructure với Terraform
+* Thiết lập CI/CD pipeline
 
 

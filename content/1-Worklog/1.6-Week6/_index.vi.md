@@ -1,58 +1,55 @@
 ---
-title: "Worklog Tuần 6"
-date: "2025-09-10"
-weight: 1
+title: "Nhật ký Tuần 6"
+date: "2025-10-13"
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 6:
 
-### Mục tiêu tuần 6:
+* Hoàn thành Module 05: AWS Security & IAM
+* Ôn tập tất cả khái niệm từ Module 1-5
+* Nghiên cứu cho dự án cuối kỳ
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học Module 05-01: Shared Responsibility Model <br> - AWS vs Customer responsibilities <br> - Service model considerations | 13/10/2025 | 13/10/2025 | AWS Cloud Journey |
+| 2 | - Học Module 05-02: IAM Deep Dive <br> - Users, Groups, Roles, Policies <br> - Best practices | 14/10/2025 | 14/10/2025 | AWS Cloud Journey |
+| 3 | - Học Module 05-03: Amazon Cognito <br> - User Pools vs Identity Pools <br> - Federation | 15/10/2025 | 15/10/2025 | AWS Cloud Journey |
+| 4 | - Học Module 05-04: AWS Organizations <br> - Multi-account management <br> - Service Control Policies | 16/10/2025 | 16/10/2025 | AWS Cloud Journey |
+| 5 | - Thực hành Lab: Module 05-Lab18 <br> - AWS Security Hub setup <br> - Security compliance | 17/10/2025 | 17/10/2025 | AWS Cloud Journey |
+| 6-7 | **ÔN TẬP & NGHIÊN CỨU** <br> - Ôn tập Module 1-5 <br> - Nghiên cứu ý tưởng dự án cuối kỳ | 18-19/10/2025 | 19/10/2025 | Tài liệu học |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 6:
 
+* Hiểu AWS Shared Responsibility Model
+* Nắm vững IAM concepts và best practices
+* Kiến thức về Cognito cho user authentication
+* Hiểu về multi-account management với Organizations
+* Cấu hình thành công Security Hub
+* Ôn tập toàn diện Module 1-5
+* Nghiên cứu các kiến trúc dự án tiềm năng
+* Tạo ghi chú học tập để chuẩn bị thi
+* Xây dựng nền tảng cho nghiên cứu dự án
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Khó khăn đối mặt:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu IAM policy evaluation logic
+* Phân biệt Cognito User Pool vs Identity Pool
+* Lựa chọn phạm vi phù hợp cho dự án cuối kỳ
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Giải pháp đã thực hiện:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tạo flowchart quyết định IAM policy
+* Xây dựng bảng so sánh các tính năng Cognito
+* Tài liệu hóa yêu cầu và ràng buộc dự án
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Kế hoạch Tuần tới:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Bắt đầu Module 06: AWS Database Services
+* Học RDS, Aurora, và DynamoDB
+* Tiếp tục nghiên cứu dự án cuối kỳ
 
 

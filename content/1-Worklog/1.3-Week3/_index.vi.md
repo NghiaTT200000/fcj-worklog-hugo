@@ -1,59 +1,55 @@
 ---
-title: "Worklog Tuần 3"
-date: "2025-09-10"
-weight: 1
+title: "Nhật ký Tuần 3"
+date: "2025-09-22"
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 3:
 
-### Mục tiêu tuần 3:
+* Hoàn thành Module 03: Amazon EC2 (Phần 1)
+* Hiểu các loại instance EC2 và tùy chọn mua
+* Tìm hiểu về các tính năng lưu trữ và mạng của EC2
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học Module 03-01-01: Tổng quan EC2 <br> - Các loại instance EC2 <br> - Các khái niệm Hypervisor | 22/09/2025 | 22/09/2025 | AWS Cloud Journey |
+| 2 | - Học Module 03-01-02: AMI & Key Pairs <br> - Amazon Machine Images <br> - Quản lý Key Pair | 23/09/2025 | 23/09/2025 | AWS Cloud Journey |
+| 3 | - Học Module 03-01-03: EBS <br> - Elastic Block Store <br> - Các loại HDD vs SSD | 24/09/2025 | 24/09/2025 | AWS Cloud Journey |
+| 4 | - Học Module 03-01-04: Instance Store <br> - Instance Store vs EBS <br> - Các trường hợp sử dụng | 25/09/2025 | 25/09/2025 | AWS Cloud Journey |
+| 5 | - Thực hành Lab: Module 03-Lab01 <br> - Launch EC2 instances <br> - Cấu hình storage | 26/09/2025 | 26/09/2025 | AWS Cloud Journey |
+| 6-7 | - Tiếp tục Thực hành Lab <br> - Test các loại instance khác nhau <br> - Backup và restore | 27-28/09/2025 | 28/09/2025 | AWS Cloud Journey |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 3:
 
+* Hiểu các loại instance EC2 và khi nào sử dụng mỗi loại
+* Học về AMIs để tùy chỉnh EC2 instances
+* Nắm vững Key Pair creation và SSH access
+* Phân biệt được EBS và Instance Store
+* Hiểu về các loại volume EBS và performance
+* Tạo thành công và cấu hình EC2 instances
+* Gắn và cấu hình EBS volumes
+* Tạo AMIs cho mục đích backup
+* Test SSH connectivity sử dụng key pairs
 
-### Kết quả đạt được tuần 3:
+### Khó khăn đối mặt:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Lựa chọn loại instance phù hợp cho workload
+* Hiểu sự khác biệt giữa EBS và Instance Store
+* Cấu hình storage performance phù hợp
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Giải pháp đã thực hiện:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tạo ma trận quyết định lựa chọn EC2 instance
+* Xây dựng bảng so sánh các tùy chọn lưu trữ
+* Metodology test performance cho EBS volumes
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch Tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tiếp tục Module 03: Amazon EC2 (Phần 2)
+* Học về User Data và Metadata
+* Tìm hiểu về Auto Scaling và Load Balancing
 
 

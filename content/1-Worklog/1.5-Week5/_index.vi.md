@@ -1,59 +1,55 @@
 ---
-title: "Worklog Tuần 5"
-date: "2025-09-10"
-weight: 1
+title: "Nhật ký Tuần 5"
+date: "2025-10-06"
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 5:
 
-### Mục tiêu tuần 5:
+* Hoàn thành Module 04: Dịch vụ lưu trữ AWS
+* Dịch thuật Blog vào ngày 10 tháng 10
+* Ôn tập các khái niệm đã học
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học Module 04-01: Tổng quan Storage <br> - S3, Storage Gateway, Snow Family <br> - Disaster Recovery concepts | 06/10/2025 | 06/10/2025 | AWS Cloud Journey |
+| 2 | - Học Module 04-02: S3 Deep Dive <br> - S3 Buckets, Access Points <br> - Storage Classes <br> - Dịch thuật Blog | 07/10/2025 | 07/10/2025 | AWS Cloud Journey |
+| 3 | - Học Module 04-03: S3 Nâng cao <br> - S3 Static Websites <br> - CORS, Versioning, Glacier <br> - Dịch thuật Blog | 08/10/2025 | 08/10/2025 | AWS Cloud Journey |
+| 4 | - Học Module 04-04: Hybrid Storage <br> - Storage Gateway <br> - Snow Family, AWS Backup <br> - Dịch thuật Blog | 09/10/2025 | 09/10/2025 | AWS Cloud Journey |
+| 5 | **NGÀY DỊCH THUẬT BLOG** <br> - Dịch thuật nội dung blog được giao <br> - Rà soát và chỉnh sửa bản dịch | 10/10/2025 | 10/10/2025 | Dịch thuật Blog |
+| 6-7 | - Thực hành Lab: Module 04-Lab13 <br> - Thiết lập S3 static website <br> - Cấu hình CloudFront | 11-12/10/2025 | 12/10/2025 | AWS Cloud Journey |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 5:
 
+* Hiểu về portfolio dịch vụ lưu trữ AWS
+* Nắm vững các khái niệm S3 và storage classes
+* Kiến thức về S3 static website hosting
+* Hiểu về các giải pháp lưu trữ hybrid
+* Dịch thuật thành công nội dung blog
+* Cấu hình S3 bucket cho static website
+* Thiết lập CloudFront distribution
+* Triển khai CORS policies
+* Test S3 versioning và lifecycle policies
 
-### Kết quả đạt được tuần 5:
+### Khó khăn đối mặt:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu các transitions S3 storage class
+* Cấu hình CORS policies phù hợp
+* Thuật ngữ kỹ thuật trong dịch thuật blog
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Giải pháp đã thực hiện:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tạo decision tree cho S3 storage class
+* Xây dựng templates cấu hình CORS
+* Glossary thuật kỹ thuật cho nhất quán dịch thuật
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch Tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Bắt đầu Module 05: AWS Security & IAM
+* Học Shared Responsibility Model
+* Tìm hiểu về IAM, Cognito, và Organizations
 
 

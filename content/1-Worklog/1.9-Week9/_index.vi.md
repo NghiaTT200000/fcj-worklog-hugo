@@ -1,59 +1,55 @@
 ---
-title: "Worklog Tuần 9"
-date: "2025-09-10"
-weight: 1
+title: "Nhật ký Tuần 9"
+date: "2025-11-03"
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 9:
 
-### Mục tiêu tuần 9:
+* Nghiên cứu AWS Advanced Services cho Dự án Cuối kỳ
+* Deep dive vào security, CI/CD, và infrastructure services
+* Đánh giá các công cụ để triển khai dự án
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Amazon Cognito Deep Dive** <br> - User pools vs Identity pools <br> - Authentication flows <br> - Social integration | 03/11/2025 | 03/11/2025 | AWS Docs |
+| 2 | **AWS WAF & Security** <br> - WAF rules và ACLs <br> - Security best practices <br> - DDoS protection | 04/11/2025 | 04/11/2025 | AWS Docs |
+| 3 | **Developer Tools Research** <br> - CodeCommit, CodeBuild, CodePipeline <br> - CodeStar overview <br> - CI/CD workflows | 05/11/2025 | 05/11/2025 | AWS Docs |
+| 4 | **Infrastructure as Code** <br> - Terraform fundamentals <br> - CloudFormation vs Terraform <br> - IaC best practices | 06/11/2025 | 06/11/2025 | Terraform Docs |
+| 5 | **AWS Amplify & Lambda** <br> - Amplify framework <br> - Lambda deep dive <br> - Serverless patterns | 07/11/2025 | 07/11/2025 | AWS Docs |
+| 6-7 | **Global Services** <br> - Route 53 configuration <br> - CloudFront strategies <br> - S3 advanced patterns | 08-09/11/2025 | 09/11/2025 | AWS Docs |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Thành tựu Tuần 9:
 
+* Hiểu toàn diện về các pattern authentication Cognito
+* Kiến thức về cấu hình WAF cho bảo mật web application
+* Hiểu về các thành phần CI/CD pipeline của AWS
+* Thành thạo cơ bản Terraform cho infrastructure management
+* Nhận biết về các khả năng của Amplify cho phát triển full-stack
+* Kiến thức về Route 53 cho DNS management
+* Hiểu về các chiến lược tối ưu CloudFront
+* Các pattern S3 nâng cao cho các use cases khác nhau
 
-### Kết quả đạt được tuần 9:
+### Khó khăn đối mặt:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Độ phức tạp của cấu hình Cognito
+* Đường cong học Terraform
+* Quyết định thiết kế CI/CD pipeline
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Giải pháp đã thực hiện:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tạo templates cấu hình Cognito
+* Xây dựng ví dụ modules Terraform
+* Thiết kế sample CI/CD workflows
+* Tài liệu hóa các quy tắc WAF
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kế hoạch Tuần tới:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thiết kế kiến trúc dự án cuối kỳ
+* Tạo kế hoạch triển khai chi tiết
+- Thiết lập môi trường phát triển
 
 

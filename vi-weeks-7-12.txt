@@ -1,0 +1,344 @@
+Week 7 Vietnamese (1.7-Week7_index.vi.md):
+---
+title: "Nhật ký Tuần 7"
+date: "2025-10-20"
+weight: 7
+chapter: false
+pre: " <b> 1.7. </b> "
+---
+
+### Mục tiêu Tuần 7:
+
+* Hoàn thành Module 06: AWS Database Services
+* Hiểu các khái niệm database và các dịch vụ database của AWS
+* Tiếp tục nghiên cứu dự án cuối kỳ
+
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học Module 06-01: Database Concepts <br> - SQL vs NoSQL <br> - OLTP vs OLAP | 20/10/2025 | 20/10/2025 | AWS Cloud Journey |
+| 2 | - Học Module 06-02: RDS & Aurora <br> - Amazon RDS features <br> - Aurora advantages | 21/10/2025 | 21/10/2025 | AWS Cloud Journey |
+| 3 | - Học Module 06-03: Redshift & ElastiCache <br> - Data warehousing <br> - Caching strategies | 22/10/2025 | 22/10/2025 | AWS Cloud Journey |
+| 4 | - Thực hành Lab: Module 06-Lab05 <br> - Create RDS instance <br> - Configure backup | 23/10/2025 | 23/10/2025 | AWS Cloud Journey |
+| 5 | - Thực hành Lab tiếp theo <br> - Connect EC2 to RDS <br> - Test failover | 24/10/2025 | 24/10/2025 | AWS Cloud Journey |
+| 6-7 | **NGHIÊN CỨU DỰ ÁN** <br> - Thiết kế kiến trúc dự án <br> - Tạo kế hoạch dự án | 25-26/10/2025 | 26/10/2025 | Nguồn dự án |
+
+### Thành tựu Tuần 7:
+
+* Hiểu các khái niệm database fundamentals
+* Kiến thức về AWS RDS và Aurora features
+* Hiểu về data warehousing với Redshift
+* Kiến thức về caching với ElastiCache
+* Tạo thành công và cấu hình RDS instance
+* Triển khai backup và restore procedures
+* Thiết kế kiến trúc dự án
+* Tạo kế hoạch triển khai chi tiết
+
+### Khó khăn đối mặt:
+
+* Lựa chọn giữa các loại database engine khác nhau
+* Hiểu Multi-AZ configurations
+* Thiết kế kiến trúc dự án có khả năng mở rộng
+
+### Giải pháp đã thực hiện:
+
+* Tạo ma trận quyết định lựa chọn database
+* Xây dựng checklist cấu hình RDS
+* Tài liệu hóa kiến trúc dự án với sơ đồ
+
+### Kế hoạch Tuần tới:
+
+* Bắt đầu Module 07: Data Analytics & Lake House
+* Học Glue, Athena, và QuickSight
+* Bắt đầu triển khai dự án cuối kỳ
+
+---
+
+Week 8 Vietnamese (1.8-Week8_index.vi.md):
+---
+title: "Nhật ký Tuần 8"
+date: "2025-10-27"
+weight: 8
+chapter: false
+pre: " <b> 1.8. </b> "
+---
+
+### Mục tiêu Tuần 8:
+
+* Hoàn thành Module 07: Data Analytics & Lake House
+* Hiểu các khái niệm data lake và services
+* Bắt đầu triển khai dự án cuối kỳ
+
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | - Học Data Lake Concepts <br> - Glue, Athena, QuickSight overview <br> - Data pipeline architecture | 27/10/2025 | 27/10/2025 | AWS Cloud Journey |
+| 2 | - Học Module 07-01: DynamoDB <br> - NoSQL concepts <br> - DynamoDB features | 28/10/2025 | 28/10/2025 | AWS Cloud Journey |
+| 3 | - Thực hành Lab: Module 07-Lab35 <br> - Create S3 Data Lake <br> - Set up Glue Crawler | 29/10/2025 | 29/10/2025 | AWS Cloud Journey |
+| 4 | - Thực hành Lab tiếp theo <br> - Athena queries <br> - QuickSight visualization | 30/10/2025 | 30/10/2025 | AWS Cloud Journey |
+| 5 | **TRIỂN KHAI DỰ ÁN CUỐI KỲ** <br> - Thiết lập cơ sở hạ tầng dự án <br> - Cấu hình các dịch vụ cốt lõi | 31/10/2025 | 31/10/2025 | Nguồn dự án |
+| 6-7 | **LÀM VIỆC DỰ ÁN** <br> - Triển khai các tính năng chính <br> - Test functionality | 01-02/11/2025 | 02/11/2025 | Nguồn dự án |
+
+### Thành tựu Tuần 8:
+
+* Hiểu về kiến trúc Data Lake
+* Kiến thức về AWS Analytics services
+* Kinh nghiệm thực hành với Glue, Athena, QuickSight
+* Hiểu về DynamoDB NoSQL database
+* Tạo thành công Data Lake pipeline
+* Triển khai data catalog với Glue
+* Tạo visualizations với QuickSight
+* Bắt đầu triển khai dự án cuối kỳ
+
+### Khó khăn đối mặt:
+
+* Hiểu Data Lake vs Data Warehouse
+* Cấu hình IAM phù hợp cho analytics services
+* Debug data transformations
+
+### Giải pháp đã thực hiện:
+
+* Tạo sơ đồ kiến trúc Data Lake
+* Xây dựng IAM policy templates cho analytics
+* Hướng dẫn data pipeline từng bước
+
+### Kế hoạch Tuần tới:
+
+* Hoàn thành triển khai dự án cuối kỳ
+* Tài liệu hóa kiến trúc dự án
+* Chuẩn bị cho thuyết trình
+
+---
+
+Week 9 Vietnamese (1.9-Week9_index.vi.md):
+---
+title: "Nhật ký Tuần 9"
+date: "2025-11-03"
+weight: 9
+chapter: false
+pre: " <b> 1.9. </b> "
+---
+
+### Mục tiêu Tuần 9:
+
+* Nghiên cứu AWS Advanced Services cho Dự án Cuối kỳ
+* Deep dive vào security, CI/CD, và infrastructure services
+* Đánh giá các công cụ để triển khai dự án
+
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Amazon Cognito Deep Dive** <br> - User pools vs Identity pools <br> - Authentication flows <br> - Social integration | 03/11/2025 | 03/11/2025 | AWS Docs |
+| 2 | **AWS WAF & Security** <br> - WAF rules và ACLs <br> - Security best practices <br> - DDoS protection | 04/11/2025 | 04/11/2025 | AWS Docs |
+| 3 | **Developer Tools Research** <br> - CodeCommit, CodeBuild, CodePipeline <br> - CodeStar overview <br> - CI/CD workflows | 05/11/2025 | 05/11/2025 | AWS Docs |
+| 4 | **Infrastructure as Code** <br> - Terraform fundamentals <br> - CloudFormation vs Terraform <br> - IaC best practices | 06/11/2025 | 06/11/2025 | Terraform Docs |
+| 5 | **AWS Amplify & Lambda** <br> - Amplify framework <br> - Lambda deep dive <br> - Serverless patterns | 07/11/2025 | 07/11/2025 | AWS Docs |
+| 6-7 | **Global Services** <br> - Route 53 configuration <br> - CloudFront strategies <br> - S3 advanced patterns | 08-09/11/2025 | 09/11/2025 | AWS Docs |
+
+### Thành tựu Tuần 9:
+
+* Hiểu toàn diện về các pattern authentication Cognito
+* Kiến thức về cấu hình WAF cho bảo mật web application
+* Hiểu về các thành phần CI/CD pipeline của AWS
+* Thành thạo cơ bản Terraform cho infrastructure management
+* Nhận biết về các khả năng của Amplify cho phát triển full-stack
+* Kiến thức về Route 53 cho DNS management
+* Hiểu về các chiến lược tối ưu CloudFront
+* Các pattern S3 nâng cao cho các use cases khác nhau
+
+### Khó khăn đối mặt:
+
+* Độ phức tạp của cấu hình Cognito
+* Đường cong học Terraform
+* Quyết định thiết kế CI/CD pipeline
+
+### Giải pháp đã thực hiện:
+
+* Tạo templates cấu hình Cognito
+* Xây dựng ví dụ modules Terraform
+* Thiết kế sample CI/CD workflows
+- Tài liệu hóa các quy tắc WAF
+
+### Kế hoạch Tuần tới:
+
+* Thiết kế kiến trúc dự án cuối kỳ
+* Tạo kế hoạch triển khai chi tiết
+- Thiết lập môi trường phát triển
+
+---
+
+Week 10 Vietnamese (1.10-Week10_index.vi.md):
+---
+title: "Nhật ký Tuần 10"
+date: "2025-11-10"
+weight: 10
+chapter: false
+pre: " <b> 1.10. </b>"
+---
+
+### Mục tiêu Tuần 10:
+
+* Thiết kế Kiến trúc Dự án Cuối kỳ
+* Lập kế hoạch triển khai infrastructure
+* Tạo thông số kỹ thuật chi tiết
+
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Architecture Planning** <br> - Thiết kế hệ thống kiến trúc <br> - Định nghĩa cấu trúc microservices <br> - Tạo sơ đồ luồng dữ liệu | 10/11/2025 | 10/11/2025 | Architecture Docs |
+| 2 | **Infrastructure Design** <br> - Lập kế VPC architecture <br> - Thiết kế lớp security <br> - Lập kế CI/CD pipeline | 11/11/2025 | 11/11/2025 | AWS Well-Architected |
+| 3 | **Database Architecture** <br> - Thiết kế data models <br> - Lập kế RDS/DynamoDB usage <br> - Thiết kế caching strategy | 12/11/2025 | 12/11/2025 | Database Patterns |
+| 4 | **Security Architecture** <br> - Thiết kế authentication flow với Cognito <br> - Lập kế WAF rules <br> - Thiết kế IAM structure | 13/11/2025 | 13/11/2025 | Security Best Practices |
+| 5 | **CDN & Global Design** <br> - Lập kế CloudFront distribution <br> - Thiết kế Route 53 strategy <br> - Lập kế S3 bucket structure | 14/11/2025 | 14/11/2025 | AWS Patterns |
+| 6-7 | **Create Terraform Scripts** <br> - Viết infrastructure code <br> - Tạo modular design <br> - Lập kế deployment stages | 15-16/11/2025 | 16/11/2025 | Terraform |
+
+### Thành tựu Tuần 10:
+
+* Tài liệu hóa kiến trúc hệ thống hoàn chỉnh
+- Thiết kế infrastructure chi tiết với các cân nhắc security
+* Kế hoạch kiến trúc data toàn diện
+* Scripts Terraform để triển khai infrastructure
+* Thiết kế CI/CD pipeline sử dụng AWS CodePipeline
+* Kiến trúc security với WAF và Cognito integration
+* Chiến lược triển khai toàn cầu với CloudFront và Route 53
+* Infrastructure code modular để tái sử dụng
+
+### Khó khăn đối mặt:
+
+* Cân bằng độ phức tạp vs khả năng mở rộng
+* Trade-offs giữa security và accessibility
+* Tối ưu hóa chi phí trong thiết kế
+
+### Giải pháp đã thực hiện:
+
+* Tạo architecture decision records (ADRs)
+* Xây dựng mô hình ước tính chi phí
+* Thiết kế phương pháp triển khai theo giai đoạn
+* Tạo chiến lược testing infrastructure
+
+### Kế hoạch Tuần tới:
+
+* Bắt đầu coding backend services
+* Triển khai core infrastructure với Terraform
+* Thiết lập CI/CD pipeline
+
+---
+
+Week 11 Vietnamese (1.11-Week11_index.vi.md):
+---
+title: "Nhật ký Tuần 11"
+date: "2025-11-17"
+weight: 11
+chapter: false
+pre: " <b> 1.11. </b> "
+---
+
+### Mục tiêu Tuần 11:
+
+* Phát triển Backend Services
+* Triển khai Lambda Function
+* Thiết lập CI/CD Pipeline
+
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Infrastructure Deployment** <br> - Áp dụng Terraform scripts <br> - Thiết lập VPC và security groups <br> - Cấu hình S3 buckets | 17/11/2025 | 17/11/2025 | Terraform |
+| 2 | **Database Setup** <br> - Triển khai RDS instances <br> - Cấu hình DynamoDB tables <br> - Thiết lập ElastiCache | 18/11/2025 | 18/11/2025 | AWS Console |
+| 3 | **Lambda Development** <br> - Tạo Lambda functions <br> - Triển khai API endpoints <br> - Thiết lập API Gateway | 19/11/2025 | 19/11/2025 | VS Code |
+| 4 | **Cognito Integration** <br> - Thiết lập User Pool <br> - Cấu hình authentication <br> - Triển khai auth trong Lambda | 20/11/2025 | 20/11/2025 | AWS Console |
+| 5 | **CodeCommit Setup** <br> - Khởi tạo repositories <br> - Push code ban đầu <br> - Thiết lập branch strategy | 21/11/2025 | 21/11/2025 | Git |
+| 6-7 | **CI/CD Pipeline** <br> - Cấu hình CodeBuild <br> - Thiết lập CodePipeline <br> - Test automated deployments | 22-23/11/2025 | 23/11/2025 | AWS Code* |
+
+### Thành tựu Tuần 11:
+
+* Triển khai thành công infrastructure sử dụng Terraform
+* Cấu hình hoàn toàn database layer với RDS và DynamoDB
+* Triển khai backend services với Lambda
+* Tích hợp hệ thống authentication Cognito
+* Thiết lập version control với CodeCommit
+* Xây dựng CI/CD pipeline với automated deployments
+* Tạo Lambda functions modular cho các dịch vụ khác nhau
+* Triển khai error handling và logging phù hợp
+
+### Khó khăn đối mặt:
+
+* Quản lý state Terraform
+* Tối ưu hóa cold start Lambda
+* Debug CI/CD pipeline
+* Độ phức tạp của cấu hình Cognito
+
+### Giải pháp đã thực hiện:
+
+* Sử dụng remote state storage cho Terraform
+* Triển khai Lambda best practices cho performance
+* Tạo pipeline testing strategies
+* Xây dựng templates cấu hình Cognito
+
+### Kế hoạch Tuần tới:
+
+* Phát triển frontend với Amplify
+* Testing và bảo đảm chất lượng
+* Tối ưu hóa performance
+* Tài liệu hóa và deployment
+
+---
+
+Week 12 Vietnamese (1.12-Week12_index.vi.md):
+---
+title: "Nhật ký Tuần 12"
+date: "2025-11-24"
+weight: 12
+chapter: false
+pre: " <b> 1.12. </b> "
+---
+
+### Mục tiêu Tuần 12:
+
+* Phát triển Frontend với Amplify
+* Testing và Quality Assurance
+* Tối ưu hóa Performance và Deployment
+
+### Công việc cần thực hiện trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 1 | **Amplify Setup** <br> - Khởi tạo dự án Amplify <br> - Cấu hình auth với Cognito <br> - Thiết lập GraphQL API | 24/11/2025 | 24/11/2025 | Amplify Docs |
+| 2 | **Frontend Development** <br> - Xây dựng React/Vue components <br> - Tích hợp với API Gateway <br> - Triển khai authentication flow | 25/11/2025 | 25/11/2025 | React/Vue |
+| 3 | **CloudFront & Route 53** <br> - Cấu hình CloudFront distribution <br> - Thiết lập custom domain <br> - Cấu hình Route 53 | 26/11/2025 | 26/11/2025 | AWS Console |
+| 4 | **WAF Implementation** <br> - Thiết lập WAF rules <br> - Cấu hình SQL injection protection <br> - Thiết lập rate limiting | 27/11/2025 | 27/11/2025 | AWS WAF |
+| 5 | **Testing & QA** <br> - Unit testing <br> - Integration testing <br> - Load testing | 28/11/2025 | 28/11/2025 | Testing Tools |
+| 6-7 | **Final Deployment** <br> - Production deployment <br> - Thiết lập monitoring <br> - Hoàn thành tài liệu | 29-30/11/2025 | 30/11/2025 | AWS |
+
+### Thành tựu Tuần 12:
+
+* Triển khai thành công ứng dụng full-stack với Amplify
+* Tích hợp authentication với Cognito
+* Cấu hình global CDN với CloudFront
+* Thiết lập custom domain với Route 53
+* Triển khai WAF cho bảo mật
+* Hoàn thành testing toàn diện
+* Tối ưu hóa performance ứng dụng
+* Triển khai đến production environment
+* Tạo tài liệu dự án hoàn chỉnh
+
+### Khó khăn đối mặt:
+
+* Độ phức tạp của cấu hình Amplify
+* Tích hợp frontend-backend
+- Delays truyền DNS
+* Tối ưu hóa performance
+
+### Giải pháp đã thực hiện:
+
+* Sử dụng Amplify CLI cho thiết lập streamlined
+* Tạo layer tích hợp API
+* Lập kế thay đổi DNS trước
+- Triển khai caching strategies
+
+### Tóm tắt Dự án:
+
+* Xây dựng ứng dụng serverless hoàn chỉnh
+* Sử dụng các dịch vụ AWS hiện đại (Lambda, DynamoDB, Cognito)
+* Triển khai CI/CD với AWS CodePipeline
+* Đạt được khả năng mở rộng toàn cầu với CloudFront
+* Bảo mật ứng dụng với WAF
+* Tài liệu hóa toàn bộ kiến trúc và quy trình deployment
