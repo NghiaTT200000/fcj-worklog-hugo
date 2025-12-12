@@ -1,3 +1,10 @@
+---
+title: "Blog 3"
+weight: 3
+chapter: false
+pre: " <b> 3.3. </b> "
+---
+
 # Lưu trữ đồng thời nhiều mô hình ngôn ngữ lớn (LLM) với LoRAX
 
 bởi John Kitaoka, Varun Jasti, and Baladithya Balamurugan vào NGÀY 16 THÁNG 4 2025 trong [Amazon EC2](https://aws.amazon.com/blogs/machine-learning/category/compute/amazon-ec2/), [Artificial Intelligence](https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/), [Generative AI](https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/generative-ai/), [Technical How-to](https://aws.amazon.com/blogs/machine-learning/category/post-types/technical-how-to/) [Permalink](https://aws.amazon.com/blogs/machine-learning/host-concurrent-llms-with-lorax/)

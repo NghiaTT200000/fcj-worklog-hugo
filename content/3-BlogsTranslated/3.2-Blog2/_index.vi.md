@@ -1,3 +1,9 @@
+---
+title: "Blog 2"
+weight: 2
+chapter: false
+pre: " <b> 3.2. </b> "
+---
 # Cách AWS Skill Builder thúc đẩy tăng trưởng kỹ năng số tại các tổ chức châu Âu
 
 bởi Luigi Belli và Aleksandar Borisavljević vào 10 THÁNG 4 2025 trong [Announcements](https://aws.amazon.com/blogs/publicsector/category/post-types/announcements/), [Artificial Intelligence](https://aws.amazon.com/blogs/publicsector/category/artificial-intelligence/), [Education](https://aws.amazon.com/blogs/publicsector/category/public-sector/education/), [Europe](https://aws.amazon.com/blogs/publicsector/category/regions/europe/), [Generative AI](https://aws.amazon.com/blogs/publicsector/category/artificial-intelligence/generative-ai/), [Government](https://aws.amazon.com/blogs/publicsector/category/public-sector/government/), [Public Sector](https://aws.amazon.com/blogs/publicsector/category/public-sector/), [Regions](https://aws.amazon.com/blogs/publicsector/category/regions/) [Permalink](https://aws.amazon.com/blogs/publicsector/how-aws-skill-builder-is-powering-digital-skills-growth-across-european-institutions/)
