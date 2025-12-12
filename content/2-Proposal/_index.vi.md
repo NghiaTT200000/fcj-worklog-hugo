@@ -1,108 +1,152 @@
 ---
-title: "Bản đề xuất"
-date: "2025-09-10"
+title: "Đề xuất Dự án"
+date: 2025-09-09
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# Nền tảng SnapResume
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+## 1. Tóm tắt Dự án
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+SnapResume là một nền tảng xây dựng hồ sơ năng lực (CV/Resume) thông minh, được hỗ trợ bởi AI, giúp người tìm việc tạo ra các hồ sơ chuyên nghiệp, chuẩn ATS (Applicant Tracking System) một cách nhanh chóng và hiệu quả. Nền tảng cung cấp các mẫu thiết kế hiện đại, công cụ chỉnh sửa trực quan và hệ thống đề xuất thông minh giúp tối ưu hóa nội dung phù hợp với mô tả công việc.
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Điểm khác biệt chính là việc tích hợp Công cụ Tìm kiếm & Đề xuất bằng AI sử dụng **AWS Bedrock** (Claude 3 Sonnet), cho phép hệ thống tự động phân tích mô tả công việc và đề xuất các phần hồ sơ phù hợp nhất từ kho dữ liệu kinh nghiệm của người dùng. Hệ thống được xây dựng hoàn toàn trên kiến trúc Serverless, đảm bảo khả năng mở rộng vô hạn và chi phí tối ưu.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+## 2. Bài toán Cần giải quyết
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+### Vấn đề là gì?
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+*   **Khó khăn trong Trình bày**: Người tìm việc thường mất hàng giờ để định dạng văn bản trong Word hoặc các công cụ thiết kế phức tạp mà vẫn không đạt được vẻ ngoài chuyên nghiệp.
+*   **Khó khăn trong chọn lọc thông tin**: Ứng viên thường có nhiều kinh nghiệm nhưng không biết chọn lọc những gì liên quan nhất đến vị trí ứng tuyển cụ thể. Việc gửi một CV "chung chung" cho mọi công ty làm giảm cơ hội trúng tuyển.
+*   **Không vượt qua được ATS**: Các CV thiết kế thủ công thường chứa các yếu tố đồ họa hoặc cấu trúc bảng biểu khiến hệ thống quét hồ sơ tự động (ATS) của nhà tuyển dụng không thể đọc được nội dung.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### Giải pháp
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+SnapResume giải quyết các vấn đề này bằng một ứng dụng web React hiện đại trên nền tảng AWS Serverless.
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+*   **Trình chỉnh sửa trực quan**: Giao diện kéo thả hoặc điền biểu mẫu đơn giản, xem trước thời gian thực (Real-time Preview).
+*   **AI Smart Matcher**: Sử dụng **AWS Bedrock** để phân tích độ phù hợp giữa kinh nghiệm của ứng viên và yêu cầu công việc, từ đó đề xuất danh sách các kỹ năng và dự án nên đưa vào CV.
+*   **Chuẩn ATS**: Các mẫu được thiết kế để thân thiện với máy đọc nhưng vẫn đẹp mắt với người đọc.
+*   **Quản lý tập trung**: Lưu trữ thư viện các sections và cho phép "lắp ghép" thành nhiều phiên bản CV khác nhau tùy theo nhu cầu.
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+## 3. Kiến trúc Giải pháp
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+Hệ thống sử dụng kiến trúc Serverless và Event-driven trên AWS.
+![AWS Architecture](/images/2-Proposal/SnapResume.png)
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+### Tổng quan Kiến trúc
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+*   **Frontend**: React + Vite + Ant Design (hosting trên Amplify và tăng tốc với CloudFront).
+*   **API Layer**: Amazon API Gateway + AWS Lambda (Node.js/TypeScript).
+*   **Database**: Amazon DynamoDB lưu trữ User, Resume, Section, Template.
+*   **Authentication**: Amazon Cognito (User Pools & Identity Pools).
+*   **AI Engine**: Amazon Bedrock (Claude 3 Sonnet) cho các tác vụ phân tích và đề xuất.
+*   **Storage**: Amazon S3 để lưu trữ ảnh đại diện, tệp PDF.
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+## 4. Triển khai Kỹ thuật
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+### Stack Công nghệ
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+*   **Frontend**: ReactJS, Ant Design, CSS Modules, html2pdf.js cho việc xuất PDF.
+*   **Backend**: NodeJS, TypeScript, Express (chạy trong Lambda).
+*   **IaC**: Terraform để quản lý toàn bộ hạ tầng.
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+### Các Giai đoạn
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+1.  **Giai đoạn 1: Core Foundation** (Đã hoàn thành)
+    *   Thiết lập hạ tầng AWS (Terraform).
+    *   Xây dựng Authentication (Cognito).
+    *   CRUD cơ bản cho Hồ sơ & Sections (DynamoDB + Lambda).
+2.  **Giai đoạn 2: Editor & Templates** (Đã hoàn thành)
+    *   Phát triển giao diện Editor Universal (Extension/Web).
+    *   Xây dựng hệ thống Template động.
+    *   Tính năng xuất PDF (html2pdf.js).
+3.  **Giai đoạn 3: AI Integration & Polish** (Đang thực hiện)
+    *   Tích hợp Amazon Bedrock cho tính năng "AI Recommendation".
+    *   Tối ưu hóa UX/UI (Features Page, Editor Flow).
+    *   Extension Integration (Web Clipper flow).
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+## 5. Ước tính Ngân sách (Chi phí AWS)
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+Mô hình định giá Serverless giúp chi phí tỉ lệ thuận với mức sử dụng. Chi phí AI tập trung vào việc phân tích dữ liệu đầu vào lớn (Input Tokens).
+
+### Giả định về Chi phí AI (**AI Cost Assumptions**)
+
+Chi phí ước tính cho dịch vụ **Amazon Bedrock** (sử dụng model **Claude 3 Sonnet**) được tính toán dựa trên kịch bản sử dụng thực tế (**MVP**) như sau:
+
+#### 1. Tần suất & Khối lượng sử dụng
+
+*   Tốc độ xử lý: Hệ thống xử lý trung bình 1 yêu cầu/phút (1 request/minute).
+*   Thời gian hoạt động: Dự kiến hệ thống chịu tải cao hoặc được sử dụng tích cực trong 2 giờ/ngày (120 phút/ngày).
+*   Tổng lưu lượng tháng: 120 yêu cầu/ngày x 30 ngày = 3.600 yêu cầu/tháng.
+
+#### 2. Kích thước Dữ liệu (**Token Size**) cho mỗi yêu cầu
+
+*   Đầu vào (**Input Tokens**): Trung bình 500 tokens/yêu cầu.
+    *   Bao gồm: Dữ liệu trích xuất từ CV hiện tại của người dùng và nội dung Mô tả công việc cần phân tích.
+*   Đầu ra (**Output Tokens**): Trung bình 600 tokens/yêu cầu.
+    *   Bao gồm: Kết quả phân tích, các gợi ý chỉnh sửa và dữ liệu trả về dưới dạng JSON có cấu trúc.
+
+#### 3. Đơn giá (**Pricing** - **Claude 3 Sonnet**)
+
+*   Input: $0.003 / 1.000 tokens (tương đương $3.00 / 1 triệu tokens).
+*   Output: $0.015 / 1.000 tokens (tương đương $15.00 / 1 triệu tokens).
+
+#### Chi tiết Tính toán Chi phí AI (AI Cost Breakdown)
+* Tổng lưu lượng tháng = Tốc độ xử lý * Thời gian hoạt động * 30 ngày
+* Chi phí Input tokens = Tổng lưu lượng * $3 / 1 triệu tokens
+* Chi phí Output tokens = Tổng lưu lượng * $15 / 1 triệu tokens
+* Chi phí Tổng = Chi phí Input tokens + Chi phí Output tokens
+
+##### Lưu lượng Thấp
+*   Tốc độ xử lý: 1 yêu cầu/phút
+*   Thời gian hoạt động: 2 giờ/ngày
+
+##### Lưu lượng Cao
+*   Tốc độ xử lý: 2 yêu cầu/phút
+*   Thời gian hoạt động: 3 giờ/ngày
+
+
+| Dịch vụ | Mô hình Tính phí | Lưu lượng Thấp | Lưu lượng Cao |
+| :--- | :--- | :--- | :--- |
+| Amazon S3 | Lưu trữ | $0.28 | $0.77 |
+| CloudFront | CDN | Free Tier | Free Tier |
+| API GW + Lambda | Tính toán | Free Tier | $2.80 |
+| DynamoDB | Cơ sở dữ liệu | Free Tier | $6.25 |
+| Cognito | Xác thực | Free Tier | Free Tier |
+| Amazon Bedrock (AI) | Tokens | $37.8 | $113.4 |
+| WAF + Route53 | Bảo mật | $12.60 | $12.60 |
+| **Tổng Chi phí / Tháng** | | **\~ $50.68** | **\~ $135.82** |
+
+## 6. Đánh giá Rủi ro
+
+### Rủi ro Bảo mật & Riêng tư (Cao)
+
+*   **Vấn đề**: Feature Recommendation yêu cầu gửi toàn bộ dữ liệu Sections của user lên Bedrock để phân tích.
+*   **Giảm thiểu**:
+    *   AWS Bedrock tuân thủ quy định không sử dụng dữ liệu khách hàng để train base model.
+    *   Mã hóa dữ liệu tại DynamoDB.
+
+### Rủi ro Chi phí (Trung bình)
+
+*   **Vấn đề**: Người dùng spam nút "Recommend" với JD dài gây tốn token Input lớn.
+*   **Giảm thiểu**:
+    *   Giới hạn độ dài Input của Job Description.
+    *   Quota limits (Ví dụ: 10 lần phân tích/ngày cho tài khoản Free).
+
+### Rủi ro Kiến trúc (Thấp)
+
+*   **Vấn đề**: Cold start của Lambda làm chậm trải nghiệm người dùng lần đầu.
+*   **Giảm thiểu**: Sử dụng Lambda SnapStart (cho Java) hoặc Provisioned Concurrency nếu cần thiết (tuy nhiên Node.js cold start thường khá nhanh).
+
+## 7. Kết quả Dự kiến
+
+*   Sở hữu một nền tảng SaaS hoàn chỉnh cho thị trường tuyển dụng.
+*   Giải quyết bài toán "Matching" giữa ứng viên và việc làm thay vì chỉ là công cụ soạn thảo văn bản thuần túy.
+*   Tận dụng sức mạnh AI của AWS để tạo giá trị thực tế (Smart Search) thay vì các tính năng "viết hộ" chung chung.
+
+[Tài liệu đính kèm](https://drive.google.com/drive/folders/1zQJ8XC6bdMWveQYIaCO-RkHh9Ppy1WyE?usp=sharing)
+
+

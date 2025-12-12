@@ -1,115 +1,156 @@
 ---
 title: "Proposal"
-date: "2025-09-10"
+date: 2025-09-09
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+# SnapResume Platform
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+## 1\. Project Summary
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+SnapResume is an intelligent, AI-powered resume-building platform designed to help job seekers create professional, ATS (Applicant Tracking System) compliant resumes quickly and efficiently. The platform offers modern design templates, intuitive editing tools, and a smart recommendation system that optimizes content to match job descriptions.
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+The key differentiator is the integration of an AI Search & Recommendation Engine using **AWS Bedrock** (Claude 3 Sonnet). This allows the system to automatically analyze job descriptions and suggest the most relevant resume sections from the user's experience data repository. The system is built entirely on a Serverless architecture, ensuring infinite scalability and optimized costs.
+
+## 2\. Problem Statement
+
+### What is the problem?
+
+  * **Formatting Difficulties:** Job seekers often spend hours formatting text in Word or complex design tools without achieving a professional look.
+  * **Difficulty in Selecting Information:** Candidates often have extensive experience but struggle to select what is most relevant to a specific position. Sending a "generic" CV to every company reduces the chance of acceptance.
+  * **ATS Rejection:** Manually designed resumes often contain graphic elements or table structures that make them unreadable to employers' automated Applicant Tracking Systems (ATS).
 
 ### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+SnapResume addresses these issues with a modern React web application built on the AWS Serverless platform.
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+  * **Visual Editor:** Simple drag-and-drop or form-filling interface with Real-time Preview.
+  * **AI Smart Matcher:** Uses **AWS Bedrock** to analyze the relevance between the candidate's experience and job requirements, thereby recommending a list of skills and projects to include in the CV.
+  * **ATS Compliant:** Templates are designed to be machine-friendly while remaining aesthetically pleasing for human readers.
+  * **Centralized Management:** Stores a library of sections and allows for "assembling" multiple resume versions based on specific needs.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+## 3\. Solution Architecture
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+The system utilizes Serverless and Event-driven architecture on AWS.
+![AWS Architecture](/images/2-Proposal/SnapResume.png)
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+### Architecture Overview
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+  * **Frontend:** React + Vite + Ant Design (hosted on Amplify and accelerated via CloudFront).
+  * **API Layer:** Amazon API Gateway + AWS Lambda (Node.js/TypeScript).
+  * **Database:** Amazon DynamoDB for storing Users, Resumes, Sections, and Templates.
+  * **Authentication:** Amazon Cognito (User Pools & Identity Pools).
+  * **AI Engine:** Amazon Bedrock (Claude 3 Sonnet) for analysis and recommendation tasks.
+  * **Storage:** Amazon S3 for storing profile pictures and PDF files.
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+## 4\. Technical Implementation
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+### Technology Stack
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+  * **Frontend:** ReactJS, Ant Design, CSS Modules, html2pdf.js for PDF export.
+  * **Backend:** NodeJS, TypeScript, Express (running inside Lambda).
+  * **IaC:** Terraform for managing the entire infrastructure.
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+### Phases
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+1.  **Phase 1: Core Foundation** (Completed)
+      * Setup AWS Infrastructure (Terraform).
+      * Build Authentication (Cognito).
+      * Basic CRUD for Resumes & Sections (DynamoDB + Lambda).
+2.  **Phase 2: Editor & Templates** (Completed)
+      * Develop Universal Editor Interface (Extension/Web).
+      * Build Dynamic Template System.
+      * PDF Export Feature (html2pdf.js).
+3.  **Phase 3: AI Integration & Polish** (In Progress)
+      * Integrate Amazon Bedrock for "AI Recommendation" feature.
+      * Optimize UX/UI (Features Page, Editor Flow).
+      * Extension Integration (Web Clipper flow).
 
-Total: $0.7/month, $8.40/12 months
+## 5\. Budget Estimate (AWS Costs)
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+The Serverless pricing model ensures costs are proportional to usage. AI costs are focused on analyzing large input data (Input Tokens).
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+### AI Cost Assumptions
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+The estimated costs for the Amazon Bedrock service (utilizing the Claude 3 Sonnet model) are calculated based on the following *real-world usage scenario* (MVP):
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+#### 1. Usage Frequency & Volume
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+1.  **Processing Rate**: The system processes an average of 1 request per minute (1 request/minute).
+2.  **Operating Time**: The system is expected to be under high load or actively used for 2 hours/day (120 minutes/day).
+3.  **Total Monthly Volume**: 120 requests/day × 30 days = 3,600 requests/month.
+
+#### 2. Data Size (Token Size) per Request
+
+1.  **Input (Input Tokens)**: Average of 500 tokens/request.
+    *   Includes: Data extracted from the user's current CV and the content of the Job Description to be analyzed.
+2.  **Output (Output Tokens)**: Average of 600 tokens/request.
+    *   Includes: Analysis results, editing suggestions, and data returned in structured JSON format.
+
+#### 3. Unit Pricing (Pricing - Claude 3 Sonnet)
+
+*   **Input**: $0.003 / 1,000 tokens (equivalent to $3.00 / 1 million tokens).
+*   **Output**: $0.015 / 1,000 tokens (equivalent to $15.00 / 1 million tokens).
+
+#### AI Cost Breakdown
+
+*   Total Monthly Volume = Frequency * Duration * 30 days
+*   Input Token Cost = Total Monthly Volume * Input Tokens per Request * ($3 / 1 million tokens)
+*   Output Token Cost = Total Monthly Volume * Output Tokens per Request * ($15 / 1 million tokens)
+*   Total Cost = Input Token Cost + Output Token Cost
+
+##### Low traffic
+*   Processing Rate: 1 request/minute
+*   Operating Time: 2 hours/day
+
+##### High traffic
+*   Processing Rate: 2 request/minute
+*   Operating Time: 3 hours/day
+
+
+| Service | Pricing Model | Low Traffic (MVP) | Medium Traffic |
+| :--- | :--- | :--- | :--- |
+| Amazon S3 | Storage | $0.28 | $0.77 |
+| CloudFront | CDN | Free Tier | Free Tier |
+| API GW + Lambda | Compute | Free Tier | $2.80 |
+| DynamoDB | Database | Free Tier | $6.25 |
+| Cognito | Auth | Free Tier | Free Tier |
+| Amazon Bedrock (AI) | Tokens | $37.8 | $113.4 |
+| WAF + Route53 | Security | $12.60 | $12.60 |
+| **Total Cost / Month** | | **\~ $50.68** | **\~ $135.82** |
+
+## 6\. Risk Assessment
+
+### Security & Privacy Risks (High)
+
+  * **Issue:** The Recommendation feature requires sending the user's entire Section data to Bedrock for analysis.
+  * **Mitigation:**
+      * AWS Bedrock complies with regulations ensuring customer data is not used to train base models.
+      * Data encryption at rest in DynamoDB.
+
+### Cost Risks (Medium)
+
+  * **Issue:** Users spamming the "Recommend" button with long Job Descriptions causing high Input Token usage.
+  * **Mitigation:**
+      * Limit the length of Job Description Input.
+      * Implement Quota limits (e.g., 10 analysis calls/day for Free accounts).
+
+### Architectural Risks (Low)
+
+  * **Issue:** Lambda cold starts slowing down the initial user experience.
+  * **Mitigation:** Use Lambda SnapStart (for Java) or Provisioned Concurrency if necessary (though Node.js cold starts are generally quite fast).
+
+## 7\. Expected Outcomes
+
+  * Ownership of a complete SaaS platform for the recruitment market.
+  * Solving the "Matching" problem between candidates and jobs, rather than being just a pure text editing tool.
+  * Leveraging AWS AI power to create real value (Smart Search) instead of generic "writing assistance" features.  
+
+
+[Attached Documents](https://drive.google.com/drive/folders/1zQJ8XC6bdMWveQYIaCO-RkHh9Ppy1WyE?usp=sharing)
+
+
+
+
