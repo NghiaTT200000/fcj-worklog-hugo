@@ -136,7 +136,4 @@ Attending the **"AI/ML/GenAI on AWS"** workshop provided invaluable insights int
 - **Rapid innovation**: Regular service updates with cutting-edge AI capabilities
 - **Local support**: Strong AWS Vietnam presence for implementation assistance
 
-#### Some event photos
-*Add your event photos here*
-
 > Overall, this workshop opened my eyes to the transformative potential of AI/ML on AWS. The combination of powerful services, expert guidance, and practical demonstrations provided a clear roadmap for leveraging artificial intelligence in our organization.
