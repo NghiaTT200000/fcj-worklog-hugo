@@ -1,3 +1,10 @@
+---
+title: "Blog 1"
+weight: 1
+chapter: false
+pre: " <b> 3.1. </b> "
+---
+
 # Cách AWS và Intel giúp các mô hình ngôn ngữ lớn trở nên dễ tiếp cận và tiết kiệm chi phí hơn với DeepSeek
 
 bởi Dylan Souvage, Vishwa Gopinath Kurakundi, và Anish Kumar vào 07 THÁNG 4 2025 trong [Amazon EC2](https://aws.amazon.com/blogs/apn/category/compute/amazon-ec2/), [Artificial Intelligence](https://aws.amazon.com/blogs/apn/category/artificial-intelligence/), [Compute](https://aws.amazon.com/blogs/apn/category/compute/), [Generative AI](https://aws.amazon.com/blogs/apn/category/artificial-intelligence/generative-ai/), [Generative AI](https://aws.amazon.com/blogs/apn/category/generative-ai-2/), [Partner solutions](https://aws.amazon.com/blogs/apn/category/post-types/partner-solutions/), [Responsible AI](https://aws.amazon.com/blogs/apn/category/responsible-ai/) [Permalink](https://aws.amazon.com/blogs/apn/how-aws-and-intel-make-llms-more-accessible-and-cost-effective-with-deepseek/)

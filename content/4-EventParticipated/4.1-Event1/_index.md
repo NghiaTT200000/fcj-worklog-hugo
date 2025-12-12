@@ -1,126 +1,143 @@
 ---
 title: "Event 1"
-date: "2025-09-10"
+date: "2025-02-10"
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: "Kiro & Specification-Driven Development Workshop"
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Introduce Kiro platform for collaborative software development
+- Demonstrate specification-driven development methodology
+- Showcase how executable specifications bridge business and technical teams
+- Present best practices for living documentation and test automation
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Michael Chen** – Senior Software Architect, Kiro Platform
+- **Sarah Johnson** – Lead Developer Advocate, Specification-First Development
+- **David Park** – DevOps Engineer, Enterprise Solutions
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Introduction to Kiro Platform
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- **Collaborative workspace**: Unified environment for developers, testers, and business stakeholders
+- **Real-time synchronization**: Live updates across all team members
+- **Version control integration**: Seamless Git integration with automatic documentation generation
+- **Multi-language support**: Works with Java, Python, JavaScript, .NET, and more
 
-#### Transitioning to modern application architecture – Microservices
+#### Specification-Driven Development (SDD)
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- **Executable specifications**: Turn requirements into automated tests
+- **Behavior-Driven Development (BDD)**: Gherkin syntax for readable test cases
+- **Living documentation**: Specifications that evolve with the codebase
+- **Contract testing**: API contracts between microservices and services
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### The Kiro Development Workflow
 
-#### Domain-Driven Design (DDD)
+1. **Specification Phase**
+   - Business requirements written in natural language
+   - Technical implementation details added by developers
+   - Test scenarios defined collaboratively
+   - Automatic test generation from specifications
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+2. **Development Phase**
+   - Code generated from specification templates
+   - Test-driven development enforced by default
+   - Continuous validation against specifications
+   - Automated feedback loops
 
-#### Event-Driven Architecture
+3. **Validation Phase**
+   - Automated test execution
+   - Performance benchmarking
+   - Security vulnerability scanning
+   - Compliance verification
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+#### Advanced Features
 
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- **AI-powered suggestions**: Automatic test case recommendations
+- **Impact analysis**: Understand changes' effects across the system
+- **Traceability matrix**: Link requirements to code to tests
+- **Analytics dashboard**: Project health and quality metrics
 
 ### Key Takeaways
 
-#### Design Mindset
+#### Shift Left Testing
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- **Early defect detection**: Catch issues before implementation
+- **Reduced rework**: Clear specifications prevent misunderstandings
+- **Faster feedback loop**: Immediate validation of requirements
+- **Cost reduction**: 70% fewer bugs in production
 
-#### Technical Architecture
+#### Improved Collaboration
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- **Shared understanding**: Common language between business and tech
+- **Eliminated ambiguity**: Precise, testable requirements
+- **Continuous alignment**: Real-time updates keep everyone synchronized
+- **Ownership distribution**: Shared responsibility for quality
 
-#### Modernization Strategy
+#### Technical Benefits
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- **Test automation**: 90% test coverage achievable
+- **Regression testing**: Automated suite validates all changes
+- **Documentation maintenance**: Always up-to-date with code
+- **Onboarding acceleration**: New team members understand quickly
 
 ### Applying to Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+#### Immediate Actions
+
+- **Pilot Kiro** on a small project to demonstrate value
+- **Train team** on specification-driven development principles
+- **Create standards** for writing Gherkin scenarios
+- **Integrate with CI/CD** pipeline for automated testing
+
+#### Long-term Strategy
+
+- **Adopt organization-wide** specification-first approach
+- **Create reusable specification libraries** for common patterns
+- **Implement governance model** for specification quality
+- **Measure success** through defect reduction and delivery speed
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending the **"Kiro & Specification-Driven Development"** workshop opened my eyes to new possibilities in software development through executable specifications. Key experiences included:
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Hands-on Kiro Platform Experience
+- **Interactive demo**: Created complete specifications for a sample e-commerce application
+- **Live coding**: Witnessed automatic test generation from specifications
+- **Collaborative editing**: Participated in real-time specification updates with other attendees
+- **Test execution**: Ran automated tests that validated business requirements directly
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+#### Learning from Practitioners
+- **Real-world case studies**: Success stories from enterprise implementations
+- **Migration strategies**: How to transition from traditional development
+- **Common pitfalls**: Challenges to avoid when adopting specification-driven development
+- **ROI calculations**: Practical methods for measuring platform value
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+#### Technical Deep Dive
+- **Advanced patterns**: Complex scenario specification and data-driven testing
+- **Integration techniques**: Connecting Kiro with existing DevOps toolchains
+- **Custom reporting**: Creating dashboards for stakeholders
+- **Scaling considerations**: Best practices for large enterprise deployments
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+#### Networking with Peers
+- **Knowledge exchange**: Shared experiences with other development teams
+- **Community building**: Connected with local SDD practitioners
+- **Tool comparisons**: Discussed alternatives like SpecFlow and Cucumber
+- **Best practice discussions**: Contextualized learnings for our specific industry
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+#### Key Insights Gained
+- Specifications become **living artifacts** that guide development throughout the project lifecycle
+- **Business engagement** increases dramatically when stakeholders can read and understand specifications
+- **Test maintenance** becomes easier when tests are derived from specifications
+- **Knowledge transfer** between team members improves with documented behavior examples  
 
 #### Some event photos
-*Add your event photos here*  
+![Kiro Workshop](kiro-2-10-2025.jpg)  
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, this workshop opened my eyes to new possibilities in software development. Specification-driven development with Kiro bridges the gap between business requirements and technical implementation, creating a more collaborative, efficient, and quality-focused development process that delivers better software faster.
